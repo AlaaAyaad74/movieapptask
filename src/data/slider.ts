@@ -15,7 +15,7 @@ const sliderData = [
     image: "/assets/movie3.webp",
   },
   {
-    image: "/assets/movie4.webp",
+    image: "/assets/movie6.webp",
   },
 ];
 export default sliderData;
