@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center w-[90%] ">
         {/* Logo & Name */}
         <div className="flex items-center gap-2">
-          <img src="/assets/logo.png" alt="logo" className="w-28 h-20" />
+          <img src="/assets/logo.webp" alt="logo" className="w-28 h-20" />
         </div>
 
         {/* Social Icons */}

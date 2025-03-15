@@ -16,3 +16,6 @@
 .slick-dots li.slick-active button:before {
   color: #ffb900 !important; /* Active dot color */
 }
+body {
+  font-family: "Poppins", sans-serif;
+}

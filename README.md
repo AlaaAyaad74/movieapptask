@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+#Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## This Movie App is a React-based application that allows users to browse movies, search for specific titles, view movie details, and navigate through paginated results. It is built using React, Redux Toolkit, TypeScript, and Tailwind CSS. The app fetches data from an API and provides a user-friendly UI with a slider and pagination features.
 
-Currently, two official plugins are available:
+#Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Browse popular movies
 
-## Expanding the ESLint configuration
+Search movies by title
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+View movie details
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Pagination for better navigation
+
+Responsive design with Tailwind CSS
+
+State management using Redux Toolkit
+
+## Smooth UI experience with React Slick for sliders
+
+#Tech Stack
+
+Frontend: React, TypeScript, Redux Toolkit
+
+Styling: Tailwind CSS
+
+Animation: AOS library
+
+State Management: Redux Toolkit
+
+## API Handling: Async Thunks in Redux
+
+#Setup Instructions:
+
+1-Clone the Repository
+
+```
+git clone https://github.com/AlaaAyaad74/movieapptask.git
+cd movieapptask
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2-Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+npm install
+```
+
+3-Run the App
+
+```
+npm run dev
+```
+
+The app will be available at http://localhost:3000/.
+
+---
+
+#Project Structure
+movie_app/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── store/ # Redux store & slices
+│ ├── pages/ # Page components
+│ ├── interfaces/ # TypeScript interfaces
+│ ├── services/ # API service handlers
+│ ├── styles/ # Global styles (Tailwind)
+│ ├── assets/ # Images, icons, etc.
+│ ├── App.tsx # Main app component
+│ ├── main.tsx # Entry point
+│
+├── public/ # Static assets
+├── .gitignore # Git ignore file
+├── package.json # Project dependencies
+├── README.md # Project documentation

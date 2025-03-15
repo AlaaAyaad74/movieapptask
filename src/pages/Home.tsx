@@ -15,12 +15,12 @@ function Home() {
     <div>
       <head>
         <title>Movie App</title>
-        <link rel="icon" href="/assets/logo.png" />
+        <link rel="icon" href="/assets/logo.webp" />
       </head>
       <Header />
 
       {showSlider && <Slidersection />}
-      <ul className="flex flex-wrap gap-6 w-[90%] mx-auto justify-center">
+      <ul className="flex flex-wrap gap-6 w-[96%] sm:w-[90%] mx-auto justify-center mt-8">
         {movies.map((movie: IMovie) => (
           <li key={movie.id}>
             <Moviecard

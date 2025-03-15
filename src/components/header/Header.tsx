@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store";
-import { fetchMovies, searchMovie, resetSlider } from "../../store/moviesSlice";
+import {
+  fetchMovies,
+  searchMovie,
+  resetSlider,
+  fetchPagesnum,
+} from "../../store/moviesSlice";
 
 function Header() {
   const dispatch = useDispatch<AppDispatch>();
@@ -14,6 +19,7 @@ function Header() {
     if (value.trim() === "") {
       dispatch(fetchMovies(1));
       dispatch(resetSlider());
+      dispatch(fetchPagesnum());
     } else {
       dispatch(searchMovie(value));
     }
@@ -25,7 +31,7 @@ function Header() {
       style={{ boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px" }}
     >
       <div className="w-[90%] mx-auto flex justify-between items-center">
-        <img src="/assets/logo.png" alt="logo" className="w-28 h-20" />
+        <img src="/assets/logo.webp" alt="logo" className="w-28 h-20" />
         <div
           className="border-2 border-amber-300 rounded p-2 ps-8 flex relative"
           style={{

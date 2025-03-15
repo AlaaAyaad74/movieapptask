@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../store/store";
 import { useEffect, useState } from "react";
 import { fetchMovies, fetchPagesnum } from "../store/moviesSlice";
+import Loader from "../components/loader/Loader";
 
 function Pagination() {
   const dispatch = useDispatch<AppDispatch>();
@@ -25,7 +26,7 @@ function Pagination() {
     console.log("Pagination");
   }, [dispatch, currentPage]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error: {error}</p>;
 
   return (

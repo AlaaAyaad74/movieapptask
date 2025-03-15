@@ -48,17 +48,18 @@ const movieSlice = createSlice({
     resetSlider: (state) => {
       state.showSlider = true;
     },
+    clearMovieDetails: (state) => {
+      state.movieDetails = null; // Clear previous movie details
+    },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMovies.pending, (state) => {
         state.loading = true;
-        console.log("pending");
       })
       .addCase(fetchMovies.fulfilled, (state, action) => {
         state.loading = false;
         state.movies = action.payload;
-        console.log("fulfilled");
       })
       .addCase(fetchMovies.rejected, (state, action) => {
         state.loading = false;
@@ -96,5 +97,5 @@ const movieSlice = createSlice({
       });
   },
 });
-export const { resetSlider } = movieSlice.actions;
+export const { resetSlider, clearMovieDetails } = movieSlice.actions;
 export default movieSlice.reducer;
