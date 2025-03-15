@@ -29,9 +29,9 @@ function Pagination() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="flex items-center justify-center gap-4 mt-4">
+    <div className="flex items-center justify-center gap-4 my-8">
       <button
-        className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+        className="px-4 py-2 bg-amber-300 text-white rounded disabled:opacity-50 cursor-pointer"
         onClick={() => setCurrentPage((prev) => prev - 1)}
         disabled={currentPage === 1}
       >
@@ -43,7 +43,7 @@ function Pagination() {
       </span>
 
       <button
-        className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+        className="px-4 py-2 bg-amber-300 text-white rounded disabled:opacity-50 cursor-pointer"
         onClick={() => setCurrentPage((prev) => prev + 1)}
         disabled={currentPage >= totalPages}
       >

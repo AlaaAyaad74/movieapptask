@@ -13,6 +13,7 @@ export interface MoviesState {
   movieDetails: IMovie | null;
   totalPages: number;
   loading: boolean;
+  showSlider:boolean;
   error: string | null;
 }
 export interface IHeroprops {

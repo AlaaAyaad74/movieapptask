@@ -24,7 +24,7 @@ function Hero({
           <h1 className="lg:text-8xl sm:text-6xl text-4xl font-bold">
             {title}
           </h1>
-          <p className=" leading-[20px]">{overview}</p>
+          <p className=" leading-[20px] truncate-4-lines">{overview}</p>
           <div className=" flex gap-4 sm:gap-8 flex-wrap lg:justify-start justify-center">
             <p>{genre?.map((g) => g.name).join(", ")}</p>
             <p>{adult ? "+18" : "+12"}</p>

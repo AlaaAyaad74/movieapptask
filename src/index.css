@@ -1,3 +1,18 @@
 @import "tailwindcss";
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
+.truncate-4-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+}
+
+.slick-dots li button:before {
+  color: hsl(0, 1%, 15%) !important; /* Default dot color */
+  font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffb900 !important; /* Active dot color */
+}

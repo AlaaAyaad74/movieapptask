@@ -16,6 +16,10 @@ function MovieDetails() {
   console.log(movieDetails);
   return (
     <div>
+      <head>
+        <title>{movieDetails?.title}</title>
+        <link rel="icon" href="/assets/logo.png" />
+      </head>
       <Hero
         poster={movieDetails?.poster_path}
         title={movieDetails?.title}

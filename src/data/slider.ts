@@ -1,21 +1,21 @@
 const sliderData = [
   {
-    image: "/assets/poster1.jpg",
+    image: "/assets/movie1.jpg",
   },
   {
-    image: "/assets/poster2.webp",
+    image: "/assets/movie5.jpg",
   },
   {
-    image: "/assets/poster3.jpg",
+    image: "/assets/movie2.jpg",
   },
   {
-    image: "/assets/poster4.jpg",
+    image: "/assets/movie2.webp",
   },
   {
-    image: "/assets/poster5.jpg",
+    image: "/assets/movie3.jpg",
   },
   {
-    image: "/assets/poster6.jpg",
+    image: "/assets/movie4.jpg",
   },
 ];
 export default sliderData;

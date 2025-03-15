@@ -1,14 +1,16 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
-
 import Header from "../components/header/Header";
 import { IMovie } from "../interfaces";
 import Moviecard from "../components/ui/moviecard/Moviecard";
 import Pagination from "../pagination/Pagination";
 
-// import Slidersection from "./components/slider/Slider";
+import Slidersection from "../components/slider/Slider";
+import Footer from "../components/footer/footer";
 function Home() {
-  const { movies } = useSelector((state: RootState) => state.movies);
+  const { movies, showSlider } = useSelector(
+    (state: RootState) => state.movies
+  );
   return (
     <div>
       <head>
@@ -17,7 +19,7 @@ function Home() {
       </head>
       <Header />
 
-      {/* <Slidersection /> */}
+      {showSlider && <Slidersection />}
       <ul className="flex flex-wrap gap-6 w-[90%] mx-auto justify-center">
         {movies.map((movie: IMovie) => (
           <li key={movie.id}>
@@ -32,6 +34,7 @@ function Home() {
         ))}
       </ul>
       <Pagination />
+      <Footer />
     </div>
   );
 }

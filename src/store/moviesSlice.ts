@@ -37,13 +37,18 @@ const initialState: MoviesState = {
   movieDetails: null,
   totalPages: 0,
   loading: false,
+  showSlider: true,
   error: null,
 };
 
 const movieSlice = createSlice({
   name: "movie",
   initialState,
-  reducers: {},
+  reducers: {
+    resetSlider: (state) => {
+      state.showSlider = true;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMovies.pending, (state) => {
@@ -65,10 +70,12 @@ const movieSlice = createSlice({
     builder
       .addCase(searchMovie.pending, (state) => {
         state.loading = true;
+        state.showSlider = false;
       })
       .addCase(searchMovie.fulfilled, (state, action) => {
         state.loading = false;
         state.movies = action.payload.results;
+        state.showSlider = false;
         state.totalPages = action.payload.total_pages;
       })
       .addCase(searchMovie.rejected, (state, action) => {
@@ -89,5 +96,5 @@ const movieSlice = createSlice({
       });
   },
 });
-
+export const { resetSlider } = movieSlice.actions;
 export default movieSlice.reducer;
