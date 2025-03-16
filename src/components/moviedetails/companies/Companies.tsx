@@ -6,7 +6,7 @@ function Companies({
   production_companies: IProCompany[] | undefined;
 }) {
   return (
-    <section className="w-[92%] mx-auto my-8">
+    <section className="w-[92%] mx-auto my-8 overflow-x-hidden">
       <h1
         className="text-5xl font-bold mb-16"
         data-aos="fade-right"

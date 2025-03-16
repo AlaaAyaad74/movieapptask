@@ -13,7 +13,7 @@ function Hero({
   homepage,
 }: IHeroprops) {
   return (
-    <section className="h-auto lg:h-[75vh] bg-amber-400 w-full text-white">
+    <section className="h-auto lg:h-[75vh] bg-amber-400 w-full text-white overflow-x-hidden">
       <div className="w-[90%] mx-auto py-[7.5vh] flex gap-12 flex-wrap lg:flex-nowrap justify-center">
         <img
           src={`https://image.tmdb.org/t/p/w500${poster}`}
